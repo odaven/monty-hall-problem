@@ -17,7 +17,6 @@ class Results:
     def add_loser(self):
         self.__losers += 1
 
-
     @property
     def winners_percentage(self):
         total = self.__winners + self.__losers
