@@ -4,6 +4,7 @@ from src.door import Door
 
 
 class DoorsSetup:
+    """ A set of doors where one of them is randomly selected as the winner """
 
     def __init__(self):
 
