@@ -21,14 +21,14 @@ class TestHost(TestCase):
 
     def test_combinations(self):
         combinations = [
-            {'constestant_choice': 0, 'winner_door': 1, 'host_door': 2},
-            {'constestant_choice': 0, 'winner_door': 2, 'host_door': 1},
+            {'contestant_choice': 0, 'winner_door': 1, 'host_door': 2},
+            {'contestant_choice': 0, 'winner_door': 2, 'host_door': 1},
 
-            {'constestant_choice': 1, 'winner_door': 0, 'host_door': 2},
-            {'constestant_choice': 1, 'winner_door': 2, 'host_door': 0},
+            {'contestant_choice': 1, 'winner_door': 0, 'host_door': 2},
+            {'contestant_choice': 1, 'winner_door': 2, 'host_door': 0},
 
-            {'constestant_choice': 2, 'winner_door': 0, 'host_door': 1},
-            {'constestant_choice': 2, 'winner_door': 1, 'host_door': 0}
+            {'contestant_choice': 2, 'winner_door': 0, 'host_door': 1},
+            {'contestant_choice': 2, 'winner_door': 1, 'host_door': 0}
         ]
 
         for combination in combinations:
@@ -37,7 +37,7 @@ class TestHost(TestCase):
             doors_setup = doors_setup_winner_in_position(winner_position)
 
             contestant = Contestant()
-            contestant.first_choice = combination.get('constestant_choice')
+            contestant.first_choice = combination.get('contestant_choice')
 
             door_by_host = Host().door(contestant, doors_setup)
             self.assertEqual(combination.get('host_door'), door_by_host, f'Failed with: {combination}')
