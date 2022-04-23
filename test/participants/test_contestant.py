@@ -1,12 +1,12 @@
 from unittest import TestCase
 from unittest.mock import patch
 
-from src.contestant import Contestant
+from src.participants.contestant import Contestant
 
 
 class TestContestant(TestCase):
 
-    @patch('src.contestant.random.randint')
+    @patch('src.participants.contestant.random.randint')
     def test_select_door_0(self, mocked_randint):
         mocked_randint.return_value = 0
 
@@ -14,7 +14,7 @@ class TestContestant(TestCase):
 
         self.assertEqual(0, contestant.first_choice)
 
-    @patch('src.contestant.random.randint')
+    @patch('src.participants.contestant.random.randint')
     def test_select_door_1(self, mocked_randint):
         mocked_randint.return_value = 1
 
@@ -22,7 +22,7 @@ class TestContestant(TestCase):
 
         self.assertEqual(1, contestant.first_choice)
 
-    @patch('src.contestant.random.randint')
+    @patch('src.participants.contestant.random.randint')
     def test_select_door_2(self, mocked_randint):
         mocked_randint.return_value = 2
 
@@ -30,7 +30,7 @@ class TestContestant(TestCase):
 
         self.assertEqual(2, contestant.first_choice)
 
-    @patch('src.contestant.random.randint')
+    @patch('src.participants.contestant.random.randint')
     def test_select_second_choice(self, mocked_randint):
         # By contestant
         mocked_randint.return_value = 0
@@ -42,7 +42,7 @@ class TestContestant(TestCase):
 
         self.assertEqual(2, second_choice)
 
-    @patch('src.contestant.random.randint')
+    @patch('src.participants.contestant.random.randint')
     def test_select_second_choice_combinations(self, mocked_randint):
         combinations = [
             {'first_choice': 0, 'door_by_host': 1, 'second_choice': 2},

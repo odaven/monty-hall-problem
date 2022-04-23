@@ -1,6 +1,6 @@
-from src.contestant import Contestant
-from src.doors_setup import DoorsSetup
-from src.host import Host
+from src.participants.contestant import Contestant
+from src.doors.doors_setup import DoorsSetup
+from src.participants.host import Host
 
 
 def game_change_strategy() -> bool:

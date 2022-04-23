@@ -1,15 +1,15 @@
 from unittest import TestCase
 from unittest.mock import patch
 
-from src.game_change_strategy import game_change_strategy
+from src.games.game_change_strategy import game_change_strategy
 from test.test_common import doors_setup_winner_in_position
 
 
 class TestGameChangeStrategy(TestCase):
 
-    @patch('src.game_change_strategy.Host')
-    @patch('src.game_change_strategy.Contestant')
-    @patch('src.game_change_strategy.DoorsSetup')
+    @patch('src.games.game_change_strategy.Host')
+    @patch('src.games.game_change_strategy.Contestant')
+    @patch('src.games.game_change_strategy.DoorsSetup')
     def test_game_change_selection_combinations(self, mocked_door_setup, mocked_contestant, mocked_host):
         combinations = [
             {'winner_door': 0, 'host_door': 1, 'second_choice': 0, 'result': True},

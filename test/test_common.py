@@ -1,4 +1,4 @@
-from src.doors_setup import DoorsSetup
+from src.doors.doors_setup import DoorsSetup
 
 
 def doors_setup_winner_in_position(position: int) -> DoorsSetup:

@@ -1,7 +1,7 @@
 from unittest import TestCase
 
-from src.contestant import Contestant
-from src.host import Host
+from src.participants.contestant import Contestant
+from src.participants.host import Host
 from test.test_common import doors_setup_winner_in_position
 
 

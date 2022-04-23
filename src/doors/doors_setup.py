@@ -1,6 +1,6 @@
 import random
 
-from src.door import Door
+from src.doors.door import Door
 
 
 class DoorsSetup:

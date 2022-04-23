@@ -1,14 +1,14 @@
 from unittest import TestCase
 from unittest.mock import patch
 
-from src.game_keep_strategy import game_keep_strategy
+from src.games.game_keep_strategy import game_keep_strategy
 from test.test_common import doors_setup_winner_in_position
 
 
 class TestGameKeepStrategy(TestCase):
 
-    @patch('src.game_keep_strategy.Contestant')
-    @patch('src.game_keep_strategy.DoorsSetup')
+    @patch('src.games.game_keep_strategy.Contestant')
+    @patch('src.games.game_keep_strategy.DoorsSetup')
     def test_game_keep_selection_win(self, mocked_door_setup, mocked_contestant):
         mocked_door_setup.return_value = doors_setup_winner_in_position(0)
         mocked_contestant.return_value.first_choice = 0
@@ -17,8 +17,8 @@ class TestGameKeepStrategy(TestCase):
 
         self.assertTrue(result)
 
-    @patch('src.game_keep_strategy.Contestant')
-    @patch('src.game_keep_strategy.DoorsSetup')
+    @patch('src.games.game_keep_strategy.Contestant')
+    @patch('src.games.game_keep_strategy.DoorsSetup')
     def test_game_change_selection(self, mocked_door_setup, mocked_contestant):
         combinations = [
             {'winner_door': 0, 'first_choice': 0, 'winner': True},

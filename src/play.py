@@ -1,5 +1,5 @@
-from src.game_change_strategy import game_change_strategy
-from src.game_keep_strategy import game_keep_strategy
+from src.games.game_change_strategy import game_change_strategy
+from src.games.game_keep_strategy import game_keep_strategy
 from src.results import Results
 
 

@@ -1,6 +1,6 @@
-from src.input_request import input_request
+from src.user_interface.input_request import input_request
 from src.play import play
-from src.results_printer import results_printer
+from src.user_interface.results_printer import results_printer
 
 
 def main():

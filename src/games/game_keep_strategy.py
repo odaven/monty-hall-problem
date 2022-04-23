@@ -1,5 +1,5 @@
-from src.contestant import Contestant
-from src.doors_setup import DoorsSetup
+from src.participants.contestant import Contestant
+from src.doors.doors_setup import DoorsSetup
 
 
 def game_keep_strategy() -> bool:
