@@ -4,7 +4,9 @@ from src.results import Results
 
 
 def play(iterations: int) -> dict:
-
+    """
+    Main method to run the games
+    """
     return {
         'results_keep_strategy': __run_games_keep_strategy(iterations),
         'results_change_strategy': __run_games_change_strategy(iterations)
@@ -33,6 +35,3 @@ def __run_games_change_strategy(iterations) -> Results:
             results.add_loser()
 
     return results
-
-
-

@@ -56,7 +56,6 @@ class TestContestant(TestCase):
         ]
 
         for combination in combinations:
-
             # By contestant
             mocked_randint.return_value = combination.get('first_choice')
 

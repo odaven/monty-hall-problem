@@ -11,7 +11,6 @@ class TestGameChangeStrategy(TestCase):
     @patch('src.game_change_strategy.Contestant')
     @patch('src.game_change_strategy.DoorsSetup')
     def test_game_change_selection_combinations(self, mocked_door_setup, mocked_contestant, mocked_host):
-
         combinations = [
             {'winner_door': 0, 'host_door': 1, 'second_choice': 0, 'result': True},
             {'winner_door': 0, 'host_door': 1, 'second_choice': 2, 'result': False},

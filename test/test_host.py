@@ -8,7 +8,6 @@ from test.test_common import doors_setup_winner_in_position
 class TestHost(TestCase):
 
     def test_host_returns_door_0(self):
-
         doors_setup = doors_setup_winner_in_position(0)
 
         contestant = Contestant()
@@ -32,7 +31,6 @@ class TestHost(TestCase):
         ]
 
         for combination in combinations:
-
             winner_position = combination.get('winner_door')
             doors_setup = doors_setup_winner_in_position(winner_position)
 
